@@ -443,9 +443,9 @@ def get_qita_page_keyboard(page: int):
     nav = []
 
     if page > 1:
-        nav.append(InlineKeyboardButton("⬅️ Oldingi", callback_data=f"qita_page_{page-1}"))
+        nav.append(InlineKeyboardButton(text="⬅️ Oldingi", callback_data=f"qita_page_{page-1}"))
     if end < len(qita_videolar):
-        nav.append(InlineKeyboardButton("➡️ Keyingi", callback_data=f"qita_page_{page+1}"))
+        nav.append(InlineKeyboardButton(text="➡️ Keyingi", callback_data=f"qita_page_{page+1}"))
     if nav:
         buttons.append(nav)
     return InlineKeyboardMarkup(inline_keyboard=buttons)
